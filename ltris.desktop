@@ -7,3 +7,4 @@ Icon=ltris.png
 Exec=ltris
 Terminal=false
 Type=Application
+# vi: encoding=utf-8
