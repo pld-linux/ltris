@@ -8,7 +8,7 @@ Vendor:		Michael Speck <kulkanie@gmx.net>
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/lgames/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-Icon:		ltris16.xpm
+Source2:	%{name}.png
 URL:		http://www.lgames.org/
 BuildRequires:	SDL >= 1.2.4 
 BuildRequires:	SDL_mixer
@@ -34,16 +34,13 @@ LTris jest klonem gry tetris dla Linuksa. Korzysta z biblioteki SDL.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_ltrisdata}/{sounds,icons,gfx}} \
-	$RPM_BUILD_ROOT{/var/games,%{_pixmapsdir},%{_applnkdir}/Games}
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games/Arcade}
 
-install src/ltris $RPM_BUILD_ROOT%{_bindir}
-install icons/ltris16.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/ltris16.xpm
-install src/sounds/*wav $RPM_BUILD_ROOT%{_ltrisdata}/sounds
-install src/gfx/*bmp $RPM_BUILD_ROOT%{_ltrisdata}/gfx
-install icons/*xpm	$RPM_BUILD_ROOT%{_ltrisdata}/icons
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
-install src/empty.hscr $RPM_BUILD_ROOT/var/games/ltris.hscr
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(2755,root,games) %{_bindir}/*
-%{_applnkdir}/Games/ltris.desktop
-%{_pixmapsdir}/*.xpm
+%{_applnkdir}/Games/Arcade/ltris.desktop
+%{_pixmapsdir}/*
 %{_datadir}/games/ltris
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/ltris.hscr
