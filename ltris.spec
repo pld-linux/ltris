@@ -1,8 +1,8 @@
 Summary:	A tetris clone for Linux
 Summary(pl):	Klon tetrisa dla Linuksa
 Name:		ltris
-Version:	1.0.3
-Release:	4
+Version:	1.0.4
+Release:	1
 License:	GPL v2+
 Vendor:		Michael Speck <kulkanie@gmx.net>
 Group:		X11/Applications/Games
