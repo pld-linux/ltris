@@ -2,7 +2,7 @@ Summary:	A tetris clone for Linux
 Summary(pl):	Klon tetrisa dla Linuxa
 Name:		ltris
 Version:	1.0.3
-Release:	2
+Release:	3
 License:	GPL
 Vendor:		Michael Speck <kulkanie@gmx.net>
 Group:		X11/Applications/Games
@@ -27,7 +27,9 @@ LTris jest klonem gry tetris dla Linuxa. Korzysta on z biblioteki SDL.
 %setup -qn %{name}-%{version}
 
 %build
-%configure2_13
+%configure2_13 \
+	--with-highscore-path=~/.lgames \
+	--with-sysconfdir=~/.lgames
 %{__make}
 
 %install
