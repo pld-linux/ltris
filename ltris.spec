@@ -1,21 +1,21 @@
 Summary:	A tetris clone for Linux
 Summary(pl):	Klon tetrisa dla Linuksa
 Name:		ltris
-Version:	1.0.6
+Version:	1.0.7
 Release:	1
 License:	GPL v2+
 Vendor:		Michael Speck <kulkanie@gmx.net>
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/lgames/%{name}-%{version}.tar.gz
-# Source0-md5:	15f72cff6cc384c028a756ed187e1d02
+# Source0-md5:	2c80799136607429b8cb7d50093ca56c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-URL:		http://www.lgames.org/
+URL:		http://lgames.sourceforge.net/index.php?project=LTris
 BuildRequires:	SDL-devel >= 1.2.4
 BuildRequires:	SDL_mixer-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_ltrisdata	%{_datadir}/games/ltris
+%define		_localstatedir	/var/games
 
 %description
 LTris is a clone of the tetris game for Linux. It uses a SDL library.
@@ -27,8 +27,7 @@ LTris jest klonem gry tetris dla Linuksa. Korzysta z biblioteki SDL.
 %setup -q
 
 %build
-%configure2_13 \
-	--with-highscore-path=/var/games
+%configure2_13
 
 %{__make}
 
@@ -51,5 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(2755,root,games) %{_bindir}/*
 %{_desktopdir}/ltris.desktop
 %{_pixmapsdir}/*.png
-%{_datadir}/games/ltris
+%{_datadir}/ltris
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/ltris.hscr
