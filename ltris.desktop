@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=LTris
 Comment=Tetris for Linux
-Comment[pl]=Tetris dla Linuxa
+Comment[pl]=Tetris dla Linuksa
 Icon=ltris.png
 Exec=ltris
 Terminal=false
