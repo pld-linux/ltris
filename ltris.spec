@@ -11,7 +11,7 @@ Source0:	http://dl.sourceforge.net/lgames/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://www.lgames.org/
-BuildRequires:	SDL >= 1.2.4 
+BuildRequires:	SDL >= 1.2.4
 BuildRequires:	SDL_mixer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
