@@ -10,7 +10,7 @@ Source0:	http://ftp1.sourceforge.net/lgames/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Icon:		ltris16.xpm
 URL:		http://www.lgames.org
-BuildRequires:	SDL > 1.2.4 
+BuildRequires:	SDL >= 1.2.4 
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
