@@ -7,6 +7,7 @@ License:	GPL v2+
 Vendor:		Michael Speck <kulkanie@gmx.net>
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/lgames/%{name}-%{version}.tar.gz
+# Source0-md5:	e5fc931877f21384972e755894254b43
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://www.lgames.org/
