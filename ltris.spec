@@ -14,7 +14,6 @@ BuildRequires:	SDL >= 1.2.4
 BuildRequires:	SDL_mixer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 %define		_ltrisdata	%{_datadir}/games/ltris
 
 %description
