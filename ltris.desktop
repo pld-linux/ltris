@@ -4,5 +4,5 @@ Comment=Tetris for Linux
 Comment[pl]=Tetris dla Linuxa
 Icon=ltris.png
 Exec=ltris
-Terminal=0
+Terminal=false
 Type=Application
