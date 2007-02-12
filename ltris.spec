@@ -1,5 +1,5 @@
 Summary:	A tetris clone for Linux
-Summary(pl):	Klon tetrisa dla Linuksa
+Summary(pl.UTF-8):   Klon tetrisa dla Linuksa
 Name:		ltris
 Version:	1.0.11
 Release:	1
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 LTris is a clone of the tetris game for Linux. It uses a SDL library.
 
-%description -l pl
+%description -l pl.UTF-8
 LTris jest klonem gry tetris dla Linuksa. Korzysta z biblioteki SDL.
 
 %prep
