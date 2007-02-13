@@ -1,5 +1,5 @@
 Summary:	A tetris clone for Linux
-Summary(pl.UTF-8):   Klon tetrisa dla Linuksa
+Summary(pl.UTF-8):	Klon tetrisa dla Linuksa
 Name:		ltris
 Version:	1.0.11
 Release:	1
