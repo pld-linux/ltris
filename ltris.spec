@@ -30,8 +30,8 @@ LTris jest klonem gry Tetris dla Linuksa. Korzysta z biblioteki SDL.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__gettextize}
